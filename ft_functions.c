@@ -6,7 +6,7 @@
 /*   By: mdoroana <mdoroana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 17:55:56 by mdoroana          #+#    #+#             */
-/*   Updated: 2022/03/28 15:26:57 by mdoroana         ###   ########.fr       */
+/*   Updated: 2022/03/28 16:03:49 by mdoroana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ int	ft_putstr(char *str)
 	int	len;
 
 	len = 0;
+	if (!str)
+		return (write(1, "(null)", 6));
 	while (str[len])
 		len++;
 	return (write(1, str, len));
@@ -42,12 +44,12 @@ int	ft_putnbr(int nb)
 	counter = 0;
 	if (nb < 0)
 		ft_putchar('-');
-	return (ft_writenb(nb, counter));
+	return ((nb < 0) + ft_writenb(nb, counter));
 }
 
 int	ft_putul(t_lu nb, char *str, int base, int counter)
 {
-	if (nb > (t_lu)(base - 1))
+	if (nb > (t_lu)base - 1)
 		counter += ft_putul(nb / base, str, base, counter);
 	counter += write(1, &str[nb % base], 1);
 	return (counter);

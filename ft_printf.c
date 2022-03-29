@@ -6,7 +6,7 @@
 /*   By: mdoroana <mdoroana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 12:21:08 by mdoroana          #+#    #+#             */
-/*   Updated: 2022/03/28 15:31:59 by mdoroana         ###   ########.fr       */
+/*   Updated: 2022/03/28 16:00:33 by mdoroana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,5 @@ int	ft_printf(const char *str, ...)
 		i++;
 	}
 	va_end(args);
-	free(args);
 	return (len);
 }
