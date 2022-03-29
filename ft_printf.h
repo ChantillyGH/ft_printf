@@ -6,7 +6,7 @@
 /*   By: mdoroana <mdoroana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 17:18:39 by mdoroana          #+#    #+#             */
-/*   Updated: 2022/03/28 15:53:17 by mdoroana         ###   ########.fr       */
+/*   Updated: 2022/03/29 17:26:04 by mdoroana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include<unistd.h>
 # include<stdlib.h>
 
+typedef unsigned int	t_ui;
 typedef unsigned long	t_lu;
 
 int	ft_putchar(char c);
